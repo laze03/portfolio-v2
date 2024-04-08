@@ -1,0 +1,102 @@
+.experience {
+  width: 45vw;
+  margin: 20rem auto;
+  max-width: 100vw;
+
+  h2 {
+    padding-bottom: 5rem;
+
+    &::after {
+      left: 36rem;
+    }
+  }
+
+  .experiences {
+    display: flex;
+
+    .name {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: flex-start;
+
+      button {
+        position: inherit;
+        text-align: left;
+        width: 15rem;
+        height: 5rem;
+        margin-left: 3rem;
+        display: flex;
+        align-items: center;
+        transition: all 0.2s cubic-bezier(1, 0.5, 0, 0.5);
+
+        &::before {
+          margin-right: 3rem;
+          content: "";
+          display: inline-block;
+          width: 0.25rem;
+          height: 100%;
+          background-color: $lightest-navy;
+          transition: all 0.2s cubic-bezier(1, 0.5, 0, 0.5);
+        }
+
+        &:hover,
+        &:active {
+          color: $green;
+          background-color: $light-navy;
+        }
+      }
+      .active {
+        color: $green;
+        background-color: $light-navy;
+
+        &::before {
+          background-color: $green;
+        }
+      }
+    }
+
+    .details {
+      @include liMarker(3rem, 2rem, 0.3rem);
+      margin-left: 2rem;
+      h4 {
+        padding-bottom: 1rem;
+      }
+
+      h6 {
+        padding-bottom: 2rem;
+      }
+
+      ul {
+        li {
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .experience {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .experience {
+    width: 80vw;
+
+    .experiences {
+      margin-left: -3rem;
+
+      .name {
+        button {
+          width: 12rem;
+          &::before {
+            margin-right: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
