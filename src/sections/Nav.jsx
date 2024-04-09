@@ -14,7 +14,7 @@ export default function Nav() {
   return (
     <nav className="nav" id="nav">
       <a href="/" className="logo">
-        <object type="image/svg+xml" data="../assets/logo.svg"></object>
+        <object type="image/svg+xml" data="logo.svg"></object>
       </a>
       <div className="nav__items">
         {link(1, "About")}
